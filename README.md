@@ -16,7 +16,7 @@ Lets take a look inside the `src` folder
 
 - `services` -> contains business logic and interact with repositories for data from DB
 
--`utils` -> contains helper methods, error classes etc.
+- `utils` -> contains helper methods, error classes etc.
 
 ### Setup the project
 
