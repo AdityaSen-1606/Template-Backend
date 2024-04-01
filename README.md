@@ -12,7 +12,7 @@ Lets take a look inside the `src` folder
 
 - `controllers` -> they are kind of last middleware as post then you call you business layer to execute the business logic. In controller we just receive the incoming requests & data and then pass it to the business layer, and once business layer return an output, we structure the API response in controllers and send the output.
 
--`repositories` -> this folder contains all logic using which we can interact the DB by writing queries, all the raw queries or ORM queries will go here.
+- `repositories` -> this folder contains all logic using which we can interact the DB by writing queries, all the raw queries or ORM queries will go here.
 
 - `services` -> contains business logic and interact with repositories for data from DB
 
@@ -21,35 +21,22 @@ Lets take a look inside the `src` folder
 ### Setup the project
 
 - Download this template from github and open it in your favorite text editor.
+- Go inside the folder path and execute the following command
+  ```
+  npm install
+  ```
 - In the root directory create a `.env` file and add the following env variables
 
-- Inside the `src/config` folder create a file named as `config.json` and write the following code:
-
-```
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
-```
-
+- go inside the `src` folder and execute the following command
+  ```
+  npx sequelize init
+  ```
+- By executing this command you will get migrations and seeders folder along with a config.json inside the config folder.
 - If you are setting up your development environment then write your username, it's password & in dialect write your db name.
 - If you're setting up test or prod environment, make sure you also replace the hosted with hosted db username.
+
+- To run server execute
+
+```
+npm run dev
+```
